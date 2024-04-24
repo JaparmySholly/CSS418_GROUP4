@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>e-invoice</title>
+
+	<link rel="stylesheet" href="css/e-invoice.css">
+</head>
+<body>
+	<div class="navigation">
+		<div class="logo">
+			<img src="img/remita_logo_white.png" alt="logo">
+		</div>
+		<div class="nav_ul">
+			<ul class="nav">
+				<li class="">
+					<a href="">about</a>
+				</li>
+				<li class="">
+					<a href="">remita mobile</a>
+				</li>
+				<li class="">
+					<a href="">developers</a>
+				</li>
+
+			</ul>
+			<div class="btns">
+				<button type="button">signin</button>
+				<button type="button">signup</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="section_1">
+			<div class="qr">
+				<img src="img/QrCodepng.png">
+			</div>
+			<div class="rrr">
+				<div class="etext">
+					<div class="head">e-invoice</div>
+					<div class="date">
+						Genarated on <span id="date"></span>
+					</div>
+				</div>
+				<div class="rrr_text">
+					<div class="title">Remita Retreival Reference (RRR):</div>
+					<div class="number">2703-0019-0273</div>
+					<div class="receiptValid">This is not receipt</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="biller_info">
+			<div class="title">
+				BILLER INFORMATION
+			</div>
+			<table class="table">
+				<tr>
+					<td>NAME</td>
+					<td>FEDERAL UNIVERSITY OF TECHNOLOGY, MINNA - 0100050</td>
+				</tr>
+				<tr>
+					<td>ADDRESS</td>
+					<td>FUT Minna Permanent Campus Gidan Kwano, Minna</td>
+				</tr>
+				<tr>
+					<td>PHONE NUMBER</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>EMAIL</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>TAX NUMBER</td>
+					<td>01526025-0001</td>
+				</tr>
+			</table>
+			<div class="title">PAYMENT INFORMATION</div>
+			<table class="table">
+				<tr>
+					<td>NAME</td>
+					<td id="name"></td>
+				</tr>
+				<tr>
+					<td>PHONE NUMBER</td>
+					<td id="phone_number"></tdi>
+				</tr>
+				<tr>
+					<td>EMAIL</td>
+					<td id="email"></td>
+				</tr>
+			</table>
+			<div class="title">PAYMENT DETAILS</div>
+			<table class="table desc">
+				<thead>
+					<tr>
+						<td>DESCRIPTION</td>
+						<td>AMOUNT (NGN)</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Being amount payable inrespect to registration</td>
+						<td id="money"></td>
+					</tr>
+					<tr>
+						<td>Charges</td>
+						<td id="charges"></td>
+					</tr>
+					<tr>
+						<td>VAT Amount</td>
+						<td id="vatAmount"></td>
+					</tr>
+					<tr class="total">
+						<td>TOTAL</td>
+						<td id="total"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="btns">
+		<button type="button" id="pay" onclick="payment(payment_method_box)">pay</button>
+	</div>
+
+	<div class="payment_method_box">
+		<div class="payment_method">
+			<div class="close" onclick="(quit(payment_method_box))">
+				<img src="img/close.svg" alt="">
+			</div>
+			<div class="body">
+				<div class="section1">
+					<span class="title">select a payment option</span>
+					<ul>
+						<li class="link">
+							<span class="icon">
+								<img src="img/credit card.svg" alt="">
+							</span>
+							<span class="text">Card</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+						<li class="link">
+							<span class="icon">
+								<img src="img/credit card.svg" alt="">
+							</span>
+							<span class="text">Bank Account</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+						<li class="link bank_branch">
+							<span class="icon">
+								<img src="img/bankBranch.svg" alt="">
+							</span>
+							<span class="text">Bank Branch</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+						<li class="link">
+							<span class="icon">
+								<img src="img/credit card.svg" alt="">
+							</span>
+							<span class="text">USSD</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+						<li class="link">
+							<span class="icon">
+								<img src="img/credit card.svg" alt="">
+							</span>
+							<span class="text">Internet Banking</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+						<li class="link remita active">
+							<span class="icon icon_text">
+								new
+							</span>
+							<span class="text">Remita</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+						<li class="link">
+							<span class="icon">
+								<img src="img/credit card.svg" alt="">
+							</span>
+							<span class="text">wallet</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+						<li class="link">
+							<span class="icon">
+								<img src="img/credit card.svg" alt="">
+							</span>
+							<span class="text">Phone Number</span>
+							<span class="check">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="section2">
+					<div class="box1">
+						<div class="box">GMBOIR</div>
+						<div class="rrr">
+							Remita etreival Reference (RRR) is:
+						</div>
+						<div class="rrr-no">
+							2703-0019-0273
+						</div>
+						<div class="text">
+							Please take this Remita Retreival Reference (RRR)
+							to pay at any Commercial or any Micro Finance bank branch.
+						</div>
+
+						<button type="button" id="print_invoice">
+							Print Invoice
+						</button>
+					</div>
+					<div class="box2">
+						<div class="title">Pay with Remita</div>
+						<h3>Continue payment:</h3>
+						<button type="button" id="pay">pay</button>
+						<div class="load">please wait... </div>
+						<div class="success"></div>
+
+						<div class="redirecting"></div>
+					</div>
+
+				</div>
+			</div>
+			<img src="img/Remita.svg" id="logo">
+		</div>
+	</div>
+<script src="js/e-invoice.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Page</title>
+
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="cover">
+		<div class="logo_box">
+			<div class="logo">
+				<div class="">c</div>
+				<div class="">
+					<span class="first">cyber</span>
+					<span class="second">security</span>
+					<span class="third">science</span>
+				</div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<nav class="navigation">
+		<div class="logo">
+			<div class="">c</div>
+			<div class="">
+				<span class="first">cyber</span>
+				<span class="second">security</span>
+				<span class="third">science</span>
+			</div>
+			<div></div>
+		</div>
+		<div class="bar">
+			<svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="login_box">
+			<div class="title">login page</div>
+			<form class="login_form">
+				<div class="box student_id" id="box">
+					<input type="text" maxlength="8" required id="student_id">
+					<label for="student_id" id="label">Student ID</label>
+				</div>
+				<ul class="error">
+					<li>Please choose a valid student ID</li>
+				</ul>
+				<div class="box password" id="box">
+					<input type="password" required id="password">
+					<label for="password" id="label">Password</label>
+					<div class="show" onclick="passwordView()">
+						<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg>
+					</div>
+				</div>
+				<ul class="password_error">
+					<h6 id="title">Password must contain:</h6>
+					<li class="eleven_cha">
+						<span class="check" id="eleven_cha">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+								<path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+							</svg>
+						</span>
+						less than 11 characters
+					</li>
+					<li class="lowercase">
+						<span class="check" id="lowercase"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></span>
+						at least one lowercase
+					</li>
+					<li class="uppercase">
+						<span class="check" id="uppercase"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></span>
+						at least one uppercase
+					</li>
+					<li class="number">
+						<span class="check" id="number"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></span>
+						at least one number
+					</li>
+				</ul>
+				<div class="forgot_password">
+					<a href="">Forgot password?</a>
+				</div>
+				<div class="submit">
+					<button type="button" onclick="submitDetails()" id="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/index.js"></script>
+
+</body>
+</html>

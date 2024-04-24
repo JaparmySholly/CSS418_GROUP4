@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pay a biller</title>
+
+	<link rel="stylesheet" href="css/remita.css">
+</head>
+<body>
+	<div class="navigation">
+		<div class="logo">
+			<img src="img/remita_logo_white.png" alt="logo">
+		</div>
+		<div class="nav_ul">
+			<ul class="nav">
+				<li class="">
+					<a href="">about</a>
+				</li>
+				<li class="">
+					<a href="">remita mobile</a>
+				</li>
+				<li class="">
+					<a href="">developers</a>
+				</li>
+
+			</ul>
+			<div class="btns">
+				<button type="button">signin</button>
+				<button type="button">signup</button>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="title">Pay a Biller</div>
+		<ul class="tabs">
+			<li class="tab">
+				<img id="icon" src="img/Pay-once-icon.png" alt="" srcset="">
+				<span class="text">pay once</span>
+			</li>
+			<li class="tab">
+				<img id="icon" src="img/recurring-payment-naira.png" alt="">
+				<span class="text">recurring payment</span>
+			</li>
+			<li class="tab">
+				<img id="icon" src="img/e-invoice.png" alt="">
+				<span class="text">pay e-invoice</span>
+			</li>
+		</ul>
+
+		<div class="container">
+			<div class="box">
+				<div class="text">
+					Who do you want to pay
+					<span class="star">*</span>
+				</div>
+				<input type="text" id="school_name" required>
+			</div>
+			<div class="box">
+				<div class="text">
+					Name of service/purpose
+					<span class="star">*</span>
+				</div>
+				<input type="text" id="registration" required>
+			</div>
+			<div class="box two">
+				<div id="box">
+					<div class="text">
+						Amount To Pay (₦)
+						<span class="star">*</span>
+					</div>
+					<input type="text" id="amount" required>
+				</div>
+				<div id="box">
+					<div class="text">
+						Select currency
+						<span class="star">*</span>
+					</div>
+					<select name="" id="">
+						<option value="">NGN - Nigerian Naira</option>
+						<option value="">USD - United State Dollar</option>
+					</select>
+				</div>
+			</div>
+			<div class="box two">
+				<div id="box">
+					<div class="text">
+						Payer's name
+						<span class="star">*</span>
+					</div>
+					<input type="text" id="payer_name" required>
+				</div>
+				<div id="box">
+					<div class="text">
+						Payer Phone
+						<span class="star">*</span>
+					</div>
+					<div class="pho_num">
+						<select name="" id="phone-number">
+							<option value="NIG">NIG</option>
+						</select>
+						<input type="number" id="phone_number" required>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="text">
+					Payer's Email
+					<span class="star">*</span>
+				</div>
+				<input type="email" id="Email" required>
+			</div>
+		</div>
+
+		<div class="checkBot">
+			<div class="content">
+				<div class="bot">
+					<!-- <input type="checkbox" id="check"> -->
+					<label id="check">
+						<div class="load"></div>
+						<span id="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Z"/></svg>
+						</span>
+						<!-- <span id="icon" style="fill: green;">
+							<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+						</span> -->
+						I'm a not robot
+					</label>
+				</div>
+				<div class="other_content">
+					<img src="img/png-transparent-recaptcha-hd-logo.png" alt="">
+					<div>
+						Privacy - Terms
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="submit">
+			By clicking <span style="font-weight: bold; color: #333;">Submit</span>  you agree to our <span style="color: #c6602df3; font-weight: 600;">Terms and Conditions</span> and <span style="color: #c6602df3; font-weight: 600;">Privacy Policy</span>
+			<div class="btns">
+				<button type="button" id="submit">submit</button>
+				<button type="button" id="reset">reset</button>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="foot first">
+			<div class="title">contact us</div>
+			<div class="body">
+				<div>
+					Remita Payment Services Limited <br>
+					<span style="color: #c6602df3;">Licensed by the Central Bank of Nigeria</span>
+				</div>
+				<div>Plot B22 Chief Yesufu Abiodun Road, Oniru
+					Victoria Island, Lagos, Nigeria</div>
+				<div>info@remita.net</div>
+			</div>
+		</div>
+		<div class="foot second">
+			<span class="term">Privacy Policy </span> | <span class="condition"> Terms & Conditions</span>
+		</div>
+		<div class="foot third">
+			<div class="title">connect with us</div>
+
+			<div class="body">
+				<ul class="icons">
+					<li><img src="img/instagram.svg" alt="instagram"></li>
+					<li><img src="img/twitter.svg" alt="instagram"></li>
+					<li><img src="img/facebook.svg" alt="instagram"></li>
+					<li><img src="img/linkedIn.svg" alt="instagram"></li>
+				</ul>
+				<ul class="get_on">
+					<li><img src="img/getOnGooglePlay.svg" alt=""></li>
+					<li><img src="img/getOnAppStore.svg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		Copyright © 2024 SystemSpecs. All Rights Reserved | Remita is a platform designed and developed by SystemSpecs.
+	</div>
+
+	<script src="js/remita.js"></script>
+</body>
+</html>
